@@ -1,0 +1,15 @@
+<launch>
+	<node pkg="control" type="send_origin" name="send_origin" output="screen">
+	</node>
+
+	<node pkg="control" type="send_destination" name="send_destination" output="screen">
+	</node>
+
+	<node pkg="control" type="speed_control" name="speed_control" output="screen">
+	</node>
+
+	<node pkg="control" type="trajectory_following" name="trajectory_following" output="screen">
+	</node>
+
+
+</launch>

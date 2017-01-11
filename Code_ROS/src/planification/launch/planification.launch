@@ -1,0 +1,6 @@
+<launch>
+
+	<node pkg="planification" type="planif_rrt" name="planif_rrt" output="screen">
+	</node>
+
+</launch>

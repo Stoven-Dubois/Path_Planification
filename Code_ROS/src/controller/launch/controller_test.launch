@@ -1,0 +1,5 @@
+<launch>
+		<node pkg="controller" type="joy_test" name="joy_test" output="screen">
+	</node>
+
+</launch>

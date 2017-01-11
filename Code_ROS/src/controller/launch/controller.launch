@@ -1,0 +1,8 @@
+<launch>
+	<include file="$(find controller)/launch/manette.launch">
+	</include>
+
+	<node pkg="controller" type="joy" name="joy" output="screen">
+	</node>
+
+</launch>

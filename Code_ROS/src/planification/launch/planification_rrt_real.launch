@@ -1,0 +1,18 @@
+<launch>
+
+	<include file="$(find control)/launch/control.launch">
+	</include>
+
+	<include file="$(find controller)/launch/controller.launch">
+	</include>
+
+	<include file="$(find exploration)/launch/exploration.launch">
+	</include>
+
+	<include file="$(find map_edition)/launch/map_edition.launch">
+	</include>
+
+	<include file="$(find planification)/launch/planification.launch">
+	</include>
+
+</launch>

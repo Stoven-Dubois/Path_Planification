@@ -1,0 +1,6 @@
+<launch>
+
+	<node pkg="exploration" type="exploration" name="exploration" output="screen">
+	</node>
+
+</launch>

@@ -1,0 +1,21 @@
+<launch>
+
+	<include file="$(find minilab_simulation)/launch/sim/minilab_simulation.launch">
+	</include>
+
+	<include file="$(find control)/launch/control.launch">
+	</include>
+
+	<include file="$(find controller)/launch/controller_test.launch">
+	</include>
+
+	<include file="$(find exploration)/launch/exploration_test.launch">
+	</include>
+
+	<include file="$(find map_edition)/launch/map_edition.launch">
+	</include>
+
+	<include file="$(find planification)/launch/planification.launch">
+	</include>
+	
+</launch>

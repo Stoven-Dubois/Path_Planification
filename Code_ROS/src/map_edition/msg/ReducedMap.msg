@@ -1,0 +1,10 @@
+float32 resolution
+float32 x_min_with_free_space
+float32 y_min_with_free_space 
+float32 x_max_with_free_space
+float32 y_max_with_free_space
+
+float32[] map
+
+float32 center_position_x
+float32 center_position_y

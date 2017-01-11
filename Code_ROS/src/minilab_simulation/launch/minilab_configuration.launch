@@ -1,0 +1,12 @@
+<launch>
+  <!-- run hokuyo urg laser range finder -->
+  <node pkg="hokuyo_node" type="hokuyo_node" name="hokuyo_node" output="screen">
+    <param name="sensor_param" value="param_value" />
+  </node>
+
+  <!-- run minilab driver to control the robot -->
+  <node pkg="minilab_v2" type="minilab_node" name="minilab_node" />
+
+  <!-- publish the static transform from the center of the robot to the laser rangefinder (required for slam_gmapping) -->
+  <node pkg="tf" type="static_transform_publisher" name="base_link_to_laser" args="0 0 0.1397 0 0 0 base_link laser 100" />
+</launch>

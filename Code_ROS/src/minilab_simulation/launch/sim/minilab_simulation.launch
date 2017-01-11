@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+ <include file="$(find minilab_simulation)/launch/sim/minilab_gazebo.launch">
+ </include>
+         <include file="$(find minilab_simulation)/launch/sim/minilab_state_publisher.launch">             
+  </include>
+</launch>

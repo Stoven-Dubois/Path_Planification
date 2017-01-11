@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<launch>
+  <param name="/use_sim_time" value="true" />
+  <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find minilab_launch)/launch/data.world"/>
+    <!-- more default parameters can be changed here -->
+  </include>
+
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-file $(find minilab_launch)/urdf/minilab.urdf -urdf  -y -4 -model minilab"/>
+  <!--node name="spawn_sdf" pkg="gazebo_ros" type="spawn_model" args="-file $(find minilab_launch)/launch/data.sdf -sdf -x -0 -y -0 -model Enovanmental" /-->
+  <!-- -->
+  <!--node name="spawn_sdf" pkg="gazebo_ros" type="spawn_model" args="-file $(find minilab_launch)/urdf/Gmapping-World.sdf -sdf -x -0 -y -0 -model Enovanmental" /--> <!-- Note: For a second test map, you can use whouse.sdf instead of minilabmap.sdf -->
+  <!--node name="spawn_sdf" pkg="gazebo_ros" type="spawn_model" args="-file $(find minilab_launch)/urdf/whouse.sdf -sdf -x -0 -y -0 -model Enovanmental" /-->
+</launch>

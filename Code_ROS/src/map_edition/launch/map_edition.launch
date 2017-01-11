@@ -1,0 +1,9 @@
+<launch>
+
+	<node pkg="map_edition" type="map_node" name="map_node" output="screen">
+	</node>
+
+	<node pkg="gmapping" type="slam_gmapping" name="slam_gmapping" output="screen">
+	</node>
+
+</launch>

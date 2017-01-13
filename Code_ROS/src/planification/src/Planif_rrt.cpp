@@ -20,23 +20,23 @@
 
 class Planif_rrt{
   public:
-  	Planif_rrt(std::string name_topic_reduced_map, std::string name_topic_origin, std::string name_topic_destination, std::string name_topic_joy, std::string name_topic_path_pub);
-  	void get_reduced_map_callback(map_edition::ReducedMap reduced_map);
-  	cv::Mat transform_from_reduced_map_to_mat(map_edition::ReducedMap);
-  	void get_origin_callback(planification::PositionCart origin);
-  	void get_destination_callback(planification::PositionCart destination);
+    Planif_rrt(std::string name_topic_reduced_map, std::string name_topic_origin, std::string name_topic_destination, std::string name_topic_joy, std::string name_topic_path_pub);
+    void get_reduced_map_callback(map_edition::ReducedMap reduced_map);
+    cv::Mat transform_from_reduced_map_to_mat(map_edition::ReducedMap);
+    void get_origin_callback(planification::PositionCart origin);
+    void get_destination_callback(planification::PositionCart destination);
     void get_joy_callback(std_msgs::Int8 joy_value);
-  	std::vector<cv::Point2i*> start(double delta_q, int nb_seconds);
-  	std::vector<cv::Point2i*> loop(double delta_q);
-  	std::vector<cv::Point2i*> loop_swaped(double delta_q);
-  	cv::Point2i* random_state();
-  	bool pixel_clear(int x, int y);
-  	Rrt_node* extend(Rrt_node* node, cv::Point2i* q_rand, double delta_q);
-  	cv::Point2i* calc_pos(cv::Point2i* near, cv::Point2i* q_rand, double delta_q);
-  	bool new_state(cv::Point2i* init, cv::Point2i* goal);
-  	bool near(cv::Point2i* init, cv::Point2i* goal, float delta_q);
-  	std::vector<cv::Point2i*> path(bool origin);
-  	std::vector<cv::Point2i*> path_partial(Rrt_node* q_new, int* size);
+    std::vector<cv::Point2i*> start(double delta_q, int nb_seconds);
+    std::vector<cv::Point2i*> loop(double delta_q);
+    std::vector<cv::Point2i*> loop_swaped(double delta_q);
+    cv::Point2i* random_state();
+    bool pixel_clear(int x, int y);
+    Rrt_node* extend(Rrt_node* node, cv::Point2i* q_rand, double delta_q);
+    cv::Point2i* calc_pos(cv::Point2i* near, cv::Point2i* q_rand, double delta_q);
+    bool new_state(cv::Point2i* init, cv::Point2i* goal);
+    bool near(cv::Point2i* init, cv::Point2i* goal, float delta_q);
+    std::vector<cv::Point2i*> path(bool origin);
+    std::vector<cv::Point2i*> path_partial(Rrt_node* q_new, int* size);
     void draw_rrt(cv::Mat map, std::vector<cv::Point2i*> path);
     std::vector<cv::Point2i*> post_traitement(std::vector<cv::Point2i*> path_found);
     nav_msgs::Path from_pixels_to_real_positions(std::vector<cv::Point2i*> path);
